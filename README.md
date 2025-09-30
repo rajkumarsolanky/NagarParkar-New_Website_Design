@@ -3,6 +3,9 @@
 ## Project Overview
 This is a static tourism website for Nagarparkar, a town in Tharparkar district, Sindh, Pakistan. The site showcases local attractions, culture, and travel information through a modern, responsive design.
 
+### Nagarparkar Tourism Website - Link 
+### https://rajkumarsolanky.github.io/NagarParkar-New_Website_Design/Index.html
+
 ## Architecture & Structure
 
 ### Core Components
