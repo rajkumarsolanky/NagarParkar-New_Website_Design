@@ -1,0 +1,229 @@
+/* Travel Info Section Styles */
+.travel-info-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #363636 100%);
+    color: white;
+}
+
+.travel-info-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/nature.jpeg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.travel-info-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.travel-info-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 0 10px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    border-color: rgba(229, 9, 20, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.info-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(229, 9, 20, 0.15);
+    border: 2px solid rgba(229, 9, 20, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+}
+
+.info-icon i {
+    font-size: 2.5em;
+    color: #e50914;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+    transform: scale(1.1);
+    background: rgba(229, 9, 20, 0.3);
+}
+
+.info-card h3 {
+    color: white;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.info-card p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+}
+
+.info-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.info-highlights li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+}
+
+.info-highlights li i {
+    color: #e50914;
+    margin-right: 12px;
+    font-size: 1.2em;
+}
+
+.season-preview,
+.transport-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.season,
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.season i,
+.option i {
+    font-size: 1.8em;
+    color: #e50914;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.season:hover,
+.option:hover {
+    transform: translateY(-5px);
+}
+
+.season:hover i,
+.option:hover i {
+    color: #ff1a1a;
+    transform: scale(1.1);
+}
+
+.info-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #e50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    margin-top: 20px;
+}
+
+.info-btn:hover {
+    background: transparent;
+    border-color: #e50914;
+    color: #e50914;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+    .travel-info-section .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+    .info-card {
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .travel-info-section {
+        padding: 40px 0;
+    }
+    .travel-info-section .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .info-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-card {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 30px 0;
+    }
+    .season-preview,
+    .transport-options {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .season,
+    .option {
+        flex: 0 0 auto;
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+    }
+}
