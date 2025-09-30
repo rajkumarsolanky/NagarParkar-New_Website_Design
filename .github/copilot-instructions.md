@@ -27,12 +27,17 @@ This is a static tourism website for Nagarparkar, a town in Tharparkar district,
 - Use semantic HTML5 elements (`<header>`, `<nav>`, `<section>`, `<footer>`)
 - Section classes follow pattern: `{section-name}-section` (e.g., `highlights-section`)
 - Card components use `{type}-card` pattern (e.g., `feature-card`, `info-card`)
+- Interactive components (buttons, menus) use `{name}-btn` naming pattern
+- Content wrappers use `{name}-content` for consistent spacing
 
 ### CSS Organization
 - Global styles in `styles.css`
 - Page-specific styles in separate CSS files (e.g., `travel-info.css`)
 - Responsive designs use mobile-first approach
 - Common breakpoint at 768px for mobile layouts
+- Header uses backdrop-filter for blur effects
+- Transitions use `transition: all 0.3s ease` for consistency
+- Fixed header with z-index: 1000 for proper layering
 
 ### Asset Management
 - Images use descriptive names and appropriate formats
@@ -57,8 +62,23 @@ This is a static tourism website for Nagarparkar, a town in Tharparkar district,
 3. Add responsive styles in appropriate CSS file
 4. Include Font Awesome icons where needed
 
+## JavaScript Patterns
+
+### Interactive Features
+- Header transforms on scroll (opacity and padding changes)
+- FAQ accordion functionality with smooth height transitions
+- Mobile menu toggle with hamburger animation
+- Category filtering system (see FAQ implementation)
+
+### Event Handling Best Practices
+- Use event delegation for dynamic content
+- Implement smooth transitions via classList
+- Check element existence before attaching listeners
+- Reuse common selectors (store in variables)
+
 ## File References
 - Base template structure: `Index.html`
 - Navigation pattern: See `header` and `topnav` in any template
 - Section examples: `templates/culture.html`, `templates/nature.html`
 - Standard footer: See any page's `footer` section
+- Interactive features: See `assets/js/script.js`
